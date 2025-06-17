@@ -19,3 +19,8 @@ resource "aws_security_group" "demo_sg" {
     Name = "demo_sg"
   }
 }
+[default]
+aws_access_key_id = AKIAUM4G6O6NGPFTL44T
+aws_secret_access_key = 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
+output = json
+region = us-east-2
