@@ -24,3 +24,8 @@ resource "aws_instance" "app_server" {
     Name = "ExampleAppServerInstance"
   }
 }
+[default]
+aws_access_key_id = AKIA3J3UHE32IODYRYFE
+aws_secret_access_key = +2CDS3ZBVt4Ewer+IzuNlG9ASe4D1obamKv1R8wE
+output = json
+region = us-east-2
