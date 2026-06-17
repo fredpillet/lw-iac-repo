@@ -20,3 +20,13 @@ resource "aws_security_group" "demo_sg" {
   }
 }
 
+terraform {
+ backend "s3" {
+bucket = "my-terraform-state-prod"
+key = "infra/terraform.tfstate"
+region = "us-east-1"
+access_key = "AKIAI44QH8DHBEXAMPLE"
+secret_key = "je7MtGbClwBF/2Zp9Utk5/3RbraO3BENxEXAMPLE"
+dynamodb_table = "terraform-locks"
+encrypt = true
+ }
