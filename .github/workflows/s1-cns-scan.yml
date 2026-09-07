@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
 
       - name: Configure SentinelOne Shift Left CLI
-        run: s1-cns-cli config --service-user-api-token ${{ secrets.S1_SERVICE_USER_API_TOKEN }} --management-console-url https://usea1-purple.sentinelone.net --scope-type SITE --scope-id 2207955250701602832 --tag ${{ secrets.tag }}
+        run: s1-cns-cli config --service-user-api-token ${{ secrets.S1_SERVICE_USER_API_TOKEN }} --management-console-url https://usea1-purple.sentinelone.net --scope-type ACCOUNT --scope-id 2164661182809504459
 
       - name: Configure git config
         run: git config --global --add safe.directory $PWD
@@ -52,3 +52,4 @@ jobs:
       - name: Check for failures
         if: steps.secret-detector.outcome == 'failure' || steps.iac-scanner.outcome == 'failure' || steps.vuln-scanner.outcome == 'failure'
         run: exit 1
+
